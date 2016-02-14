@@ -62,13 +62,37 @@ $
 //Funky hello world to demonstrate even static methods are inherited, including main method
 //Also note the class on which it is invoked to run are not public class, it did not change whether class is public or not
 class Hello_New {
+	//Notice if we change the return type to other than void, it compiles well but gives a run time exception
+	//public static int main(String[] args) {
+
+	//In this, removed the parameter of main, this will also not work, exact signature of main method is a must to run the program
+	//public static void main() {
+
 	public static void main(String[] args) {
 		System.out.println("Hello, new world!");
+
+		//If you try to access the array element without it being initlised or assigned with a value, will encounter java.lang.ArrayIndexOutOfBoundsException 
+		/*System.out.println("0: " + args[0]);
+		System.out.println("1: " + args[1]);
+		System.out.println("2: " + args[2]);*/
+
+		//return 0;
 	}
 }
 
+//This also not worked, as file name and class name must match for a entry point
+//class Hello_one extends Hello_New {
+
+//We are extending the class which has the main method, this is possible 
 //public class Hello extends Hello_New {
 class Hello extends Hello_New {
+
+}
+
+//This is to check the size of Dummy.class file, which is a eg for size of an empty class
+//Notice when you compile, each class defined in the same file will produce independent class files
+//In this current example as of now we have 3 classes defined in same file and when you compile you will get 3 class files
+class Dummy {
 
 }
 
@@ -84,6 +108,6 @@ $
 
 */
 
-//This did not world
+//This did not worked
 //Hello h = new Hello();
 
