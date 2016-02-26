@@ -17,9 +17,6 @@ public class SampleClass {
 		Test t = new Test();
 		t.Test();
 
-		String java.lang = "Basavaraj";
-		System.out.println(java.lang);
-
 	}
 }
 
@@ -28,5 +25,27 @@ class Test {
 	SampleClass c = new SampleClass();
 		//You can see from below you can access a instance variable directly to get the value even from another class
 		System.out.println(c.id);
+	}
+
+	//Invalid way of declaring a method, the order of signature to declare & define a method has to be followed
+	/*void final TestMe() {
+
+	}*/
+
+	//this is not a valid method definition as not all controll paths reach the return statement
+	/*String walk6(int a) { 
+		if (a == 4) 
+			return ""; 		
+	}*/
+
+	Object TestDummyReturn() {
+		//i can return any premetive and reference types from here 
+		//All below return types are vald ....! 
+		//return 0;
+		//return 9L;
+		//return "";
+		//return new Test();
+		//return new StringBuilder();
+		return new java.util.ArrayList();
 	}
 }
